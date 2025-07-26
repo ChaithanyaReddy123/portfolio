@@ -172,11 +172,11 @@ const About = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              I am N Chaithanya, a passionate software developer with a strong background in Java development, React front-end applications, and AWS cloud technologies. With a focus on building scalable and maintainable software solutions, I thrive in collaborative environments that embrace innovation and technical excellence.
+              I am N Chaithanya, a solutions-driven Software Developer with specialized expertise in Azure cloud technologies, Java enterprise applications, and modern front-end frameworks. I focus on creating scalable, resilient applications that deliver real business value through thoughtful architecture and clean code.
               <br /><br />
-              My technical expertise includes Java, Spring Boot, React, JavaScript, AWS services, SQL databases, RESTful API design, and microservices architecture. I am committed to writing clean, efficient code that follows best practices and delivers exceptional user experiences.
+              I lead development of web applications and cloud infrastructure that enhance reliability and scalability for 100+ daily users. My expertise includes building reusable React components that have reduced development time by 40% while improving application responsiveness by 25%. I've implemented CI/CD pipelines with 95%+ deployment success rates while mentoring junior developers to increase team productivity.
               <br /><br />
-              Throughout my career, I have successfully delivered multiple projects, working closely with cross-functional teams to transform business requirements into technical solutions. I enjoy solving complex problems and continuously learning new technologies to stay at the forefront of the software development industry.
+              Throughout my career, I've successfully led technical initiatives that have improved system reliability, reduced operational costs, and enhanced end-user experiences. I thrive in collaborative environments where I can contribute both technical expertise and strategic thinking to solve complex business challenges.
             </Bio>
             
             <PersonalInfo
@@ -219,13 +219,13 @@ const About = () => {
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  <TimelinePeriod>2021 - Present</TimelinePeriod>
-                  <TimelineTitle>Senior Software Engineer</TimelineTitle>
-                  <TimelineLocation>Tech Innovations Inc., California</TimelineLocation>
+                  <TimelinePeriod>2024 - Present</TimelinePeriod>
+                  <TimelineTitle>Software Engineer</TimelineTitle>
+                  <TimelineLocation>Optum(UHG)</TimelineLocation>
                   <TimelineDescription>
-                    Lead developer for enterprise-scale applications using Java and AWS cloud infrastructure.
-                    Architected and implemented microservices solutions with Spring Boot and RESTful APIs.
-                    Mentored junior developers and conducted code reviews to ensure quality and best practices.
+                    Lead developer for enterprise-scale applications using Java and Azure cloud infrastructure.
+                    Designed and implemented microservices architecture using Azure App Service, Azure Functions, and Azure Kubernetes Service.
+                    Established CI/CD pipelines with Azure DevOps for automated testing, deployment, and monitoring.
                   </TimelineDescription>
                 </TimelineItem>
                 
@@ -235,13 +235,13 @@ const About = () => {
                   transition={{ duration: 0.5, delay: 0.2 }}
                   viewport={{ once: true }}
                 >
-                  <TimelinePeriod>2018 - 2021</TimelinePeriod>
-                  <TimelineTitle>Full Stack Developer</TimelineTitle>
-                  <TimelineLocation>Digital Solutions Group, California</TimelineLocation>
+                  <TimelinePeriod>2022 - 2024</TimelinePeriod>
+                  <TimelineTitle>Associate Software Engineer</TimelineTitle>
+                  <TimelineLocation>Optum(UHG)</TimelineLocation>
                   <TimelineDescription>
-                    Developed and maintained web applications using React, Node.js, and Java.
-                    Implemented CI/CD pipelines for automated testing and deployment.
-                    Collaborated with cross-functional teams to deliver client projects on schedule.
+                    Developed responsive web applications using React.js frontend and Spring Boot backend.
+                    Implemented containerized solutions with Docker and managed infrastructure with Azure.
+                    Led integration of authentication services using Azure Active Directory and API Management.
                   </TimelineDescription>
                 </TimelineItem>
                 
@@ -251,9 +251,9 @@ const About = () => {
                   transition={{ duration: 0.5, delay: 0.4 }}
                   viewport={{ once: true }}
                 >
-                  <TimelinePeriod>2014 - 2018</TimelinePeriod>
+                  <TimelinePeriod>2018 - 2022</TimelinePeriod>
                   <TimelineTitle>Bachelor of Technology in Computer Science</TimelineTitle>
-                  <TimelineLocation>Technical University, California</TimelineLocation>
+                  <TimelineLocation>Amrita Vishwa Vidyapeetham</TimelineLocation>
                   <TimelineDescription>
                     Graduated with honors in Computer Science with specialization in Software Engineering.
                     Completed capstone project on cloud-based application deployment and scaling.

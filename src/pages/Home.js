@@ -82,6 +82,10 @@ const ButtonGroup = styled(motion.div)`
 
 const PrimaryButton = styled(Link)`
   padding: 0.8rem 2rem;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background-color: ${({ theme }) => theme.primary};
   color: white;
   border-radius: 5px;
@@ -97,12 +101,41 @@ const PrimaryButton = styled(Link)`
 
 const SecondaryButton = styled(Link)`
   padding: 0.8rem 2rem;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background-color: transparent;
   color: ${({ theme }) => theme.primary};
   border: 2px solid ${({ theme }) => theme.primary};
   border-radius: 5px;
   font-weight: 600;
   transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: ${({ theme }) => theme.primary};
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+`;
+
+const ResumeLink = styled.a`
+  padding: 0.8rem 2rem;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: ${({ theme }) => theme.primary};
+  border: 2px solid ${({ theme }) => theme.primary};
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  
+  i {
+    margin-right: 0.5rem;
+  }
   
   &:hover {
     background-color: ${({ theme }) => theme.primary};
@@ -263,15 +296,18 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              A passionate software developer with expertise in Java, React, and AWS cloud technologies. Experienced in designing and implementing full-stack applications with a focus on scalable, maintainable solutions. Committed to delivering high-quality code and exceptional user experiences.
+              A results-oriented Software Developer with expertise in Azure cloud solutions, Java, and modern frontend frameworks like React. Specializing in building scalable enterprise applications and cloud-native solutions. Passionate about leveraging technology to solve complex business challenges with clean, efficient code.
             </Description>
             <ButtonGroup
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
             >
-              <PrimaryButton to="/contact">Get In Touch</PrimaryButton>
+              {/* <PrimaryButton to="/contact">Get In Touch</PrimaryButton> */}
               <SecondaryButton to="/projects">View Projects</SecondaryButton>
+              <ResumeLink href="https://drive.google.com/file/d/12EArfhII6jmiVPtp6HMjkLQEsPvc-WMi/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <i className="fas fa-file-alt"></i> Resume
+              </ResumeLink>
             </ButtonGroup>
           </HeroText>
           <HeroImage
@@ -279,7 +315,7 @@ const Home = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <img src="/profile-placeholder.png" alt="N Chaithanya" />
+            <img src={require('../img.jpeg')} alt="N Chaithanya" />
           </HeroImage>
         </HeroContent>
       </HeroSection>
@@ -315,8 +351,8 @@ const Home = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <i className="fab fa-aws"></i>
-              <h3>AWS</h3>
+              <i className="fab fa-microsoft azure-icon"></i>
+              <h3>Azure</h3>
             </SkillCard>
             <SkillCard
               whileHover={{ y: -5 }}
@@ -348,6 +384,26 @@ const Home = () => {
               <i className="fas fa-server"></i>
               <h3>Spring Boot</h3>
             </SkillCard>
+            <SkillCard
+              whileHover={{ y: -5 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <i className="fas fa-cloud"></i>
+              <h3>Microservices</h3>
+            </SkillCard>
+            <SkillCard
+              whileHover={{ y: -5 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+              viewport={{ once: true }}
+            >
+              <i className="fab fa-docker"></i>
+              <h3>Docker</h3>
+            </SkillCard>
           </SkillsGrid>
         </SkillsContainer>
       </SkillsSection>
@@ -361,9 +417,9 @@ const Home = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <i className="fas fa-briefcase"></i>
-            <h3>Experience</h3>
-            <p>X years of professional experience in software development with expertise in web technologies.</p>
+            <i className="fas fa-cloud"></i>
+            <h3>Cloud Solutions</h3>
+            <p>Designed and implemented scalable Azure cloud solutions including microservices architecture, containerized applications, and CI/CD pipelines.</p>
           </HighlightCard>
           <HighlightCard
             initial={{ opacity: 0, y: 20 }}
@@ -371,9 +427,9 @@ const Home = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <i className="fas fa-certificate"></i>
-            <h3>Certifications</h3>
-            <p>Certified in various technologies and methodologies that enhance my development capabilities.</p>
+            <i className="fas fa-code"></i>
+            <h3>Full-Stack Development</h3>
+            <p>Developed robust enterprise applications using Java/Spring Boot backends and modern React frontends, focused on performance and user experience.</p>
           </HighlightCard>
           <HighlightCard
             initial={{ opacity: 0, y: 20 }}
@@ -381,9 +437,9 @@ const Home = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <i className="fas fa-code-branch"></i>
-            <h3>Projects</h3>
-            <p>Successfully delivered multiple projects using modern frameworks and best practices.</p>
+            <i className="fas fa-project-diagram"></i>
+            <h3>Technical Leadership</h3>
+            <p>Led cross-functional teams in designing and implementing solutions that improved efficiency and reduced operational costs for clients.</p>
           </HighlightCard>
         </HighlightsGrid>
       </HighlightsSection>

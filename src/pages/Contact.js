@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 
 const ContactSection = styled.section`
   padding: 5rem 0;
@@ -245,8 +246,20 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    // Email configuration for sending to chaithanya.n2001@gmail.com
+    const serviceId = 'service_id'; // Replace with your EmailJS service ID
+    const templateId = 'template_id'; // Replace with your EmailJS template ID
+    const userId = 'user_id'; // Replace with your EmailJS user ID
+    
+    // Using EmailJS to send the form data
+    emailjs.send(serviceId, templateId, {
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+      to_email: 'chaithanya.n2001@gmail.com'
+    }, userId)
+    .then(() => {
       setIsSubmitting(false);
       setSubmitResult({
         success: true,
@@ -265,7 +278,15 @@ const Contact = () => {
       setTimeout(() => {
         setSubmitResult(null);
       }, 5000);
-    }, 1500);
+    })
+    .catch(error => {
+      console.error('Error sending email:', error);
+      setIsSubmitting(false);
+      setSubmitResult({
+        success: false,
+        message: 'There was an error sending your message. Please try again later.'
+      });
+    });
   };
   
   return (
@@ -292,8 +313,8 @@ const Contact = () => {
                 <ContactDetails>
                   <ContactType>Email</ContactType>
                   <ContactValue>
-                    <ContactLink href="mailto:nchaithanya@email.com">
-                      nchaithanya@email.com
+                    <ContactLink href="mailto:chaithanya.n2001@gmail.com">
+                      chaithanya.n2001@gmail.com
                     </ContactLink>
                   </ContactValue>
                 </ContactDetails>
@@ -311,8 +332,8 @@ const Contact = () => {
                 <ContactDetails>
                   <ContactType>Phone</ContactType>
                   <ContactValue>
-                    <ContactLink href="tel:+12345678900">
-                      +1 (234) 567-8900
+                    <ContactLink href="tel:+916303767407">
+                      +91 6303767407
                     </ContactLink>
                   </ContactValue>
                 </ContactDetails>
@@ -329,7 +350,7 @@ const Contact = () => {
                 </ContactIcon>
                 <ContactDetails>
                   <ContactType>Location</ContactType>
-                  <ContactValue>California, USA</ContactValue>
+                  <ContactValue>India</ContactValue>
                 </ContactDetails>
               </ContactMethod>
             </ContactMethods>
@@ -339,14 +360,8 @@ const Contact = () => {
               <SocialLink href="https://github.com/nchaithanya" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-github"></i>
               </SocialLink>
-              <SocialLink href="https://linkedin.com/in/nchaithanya" target="_blank" rel="noopener noreferrer">
+              <SocialLink href="https://www.linkedin.com/in/chaithanya-nachukuru" target="_blank" rel="noopener noreferrer">
                 <i className="fab fa-linkedin-in"></i>
-              </SocialLink>
-              <SocialLink href="https://medium.com/@nchaithanya" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-medium-m"></i>
-              </SocialLink>
-              <SocialLink href="https://stackoverflow.com/users/nchaithanya" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-stack-overflow"></i>
               </SocialLink>
             </SocialLinks>
           </ContactInfo>

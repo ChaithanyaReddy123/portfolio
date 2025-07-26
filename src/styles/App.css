@@ -32,3 +32,8 @@
 .slide-up {
   animation: slideUp 0.8s ease forwards;
 }
+
+/* Azure Icon Styling */
+.azure-icon {
+  color: #0078D4 !important; /* Azure blue color */
+}

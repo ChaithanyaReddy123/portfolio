@@ -50,11 +50,11 @@ const Footer = () => {
           <SocialLink href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-github"></i>
           </SocialLink>
-          <SocialLink href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+          <SocialLink href="https://www.linkedin.com/in/chaithanya-nachukuru" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-linkedin"></i>
           </SocialLink>
           <SocialLink href="https://leetcode.com/yourusername" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-code"></i>
+            <i className="fab fa-leetcode"></i>
           </SocialLink>
           <SocialLink href="mailto:your.email@example.com">
             <i className="fas fa-envelope"></i>

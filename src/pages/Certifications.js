@@ -251,24 +251,30 @@ const certificationsData = [
 const achievementsData = [
   {
     id: 1,
+    title: 'Bravo Award',
+    description: 'Received Bravo Award from Optum for delivering an insightful presentation on Retrieval Augmented Generation (RAG) chatbot technology and its practical applications.',
+    icon: 'fas fa-award'
+  },
+  {
+    id: 2,
     title: 'Technical Innovation Award',
     description: 'Received company-wide recognition for implementing a microservices architecture that reduced system response time by 60% and improved scalability.',
     icon: 'fas fa-lightbulb'
   },
   {
-    id: 2,
+    id: 3,
     title: 'Java Community Leader',
     description: 'Active contributor to Java community with over 500 GitHub stars on open source projects and multiple accepted pull requests to major frameworks.',
     icon: 'fas fa-code-branch'
   },
   {
-    id: 3,
+    id: 4,
     title: 'Cloud Migration Expert',
     description: 'Successfully led a team that migrated a legacy monolithic application to AWS cloud infrastructure, resulting in 40% cost reduction and improved reliability.',
     icon: 'fas fa-cloud'
   },
   {
-    id: 4,
+    id: 5,
     title: 'Technical Conference Speaker',
     description: 'Presented at multiple tech conferences on topics including Java optimization, cloud architecture, and modern React development patterns.',
     icon: 'fas fa-microphone'
